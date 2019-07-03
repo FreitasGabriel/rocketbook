@@ -11,6 +11,8 @@ class App extends Component {
             <Fragment>
                 <Header/>
                 <Post />
+                <Post />
+                <Post />
             </Fragment>
         )
     }
