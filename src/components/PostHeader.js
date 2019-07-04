@@ -1,18 +1,20 @@
-import React, {Component, Fragment} from 'react';
-import { render } from 'react-dom';
-import photo from '../image/photo.png'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class PostHeader extends Component{
-    render() {
-        return (
+
+const PostHeader = ({name, time, image}) => (
             <div className='post_header'>
-                <img src={photo} id="photo"/>
-                <p id="name"> Gabriel de Freitas Santos</p>
-                <p id="time"> Há 3min.</p>
+                <img src={image} id="photo"/>
+                <p id="name"> {name}</p>
+                <p id="time"> {time}</p>
                 <hr id='post_header_hr'></hr>
             </div>
-        )
-    }
-}
+        );
 
-render(<PostHeader/>, document.getElementById('app'))
+PostHeader.propTypes = {
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    time: PropTypes.string.isRequired,
+};
+
+export default PostHeader;

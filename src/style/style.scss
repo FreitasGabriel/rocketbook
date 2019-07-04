@@ -14,11 +14,13 @@ body {
 
 .post {
     width: 700px;
-    height: 350px;
     background: #ffffff;
     margin-left: 290px ;
     border: #333;
     margin-top: 50px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    overflow:hidden;
 }
 
 #photo {
